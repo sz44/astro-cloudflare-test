@@ -1,4 +1,9 @@
 /// <reference types="astro/client" />
+
+type Env = {
+	DB: D1Database;
+}
+
 type Runtime = import("@astrojs/cloudflare").Runtime<Env>;
 
 declare namespace App {
