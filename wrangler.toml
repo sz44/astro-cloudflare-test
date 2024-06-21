@@ -33,7 +33,9 @@ pages_build_output_dir = "./dist"
 binding = "DB" # i.e. available in your Worker on env.DB
 database_name = "staff-directory"
 database_id = "e7dce634-9248-407a-8611-c490028e753b"
-
+# prod-d1-tutorail Customers 
+# database_id = "5109b203-eb39-440e-90d1-26b4bf153834"
+# database_id = "54926698-ace2-43ef-93cd-7351c6bf91ed"
 # Bind a Durable Object. Durable objects are a scale-to-zero compute primitive based on the actor model.
 # Durable Objects can live for as long as needed. Use these when you need a long-running "server", such as in realtime apps.
 # Docs: https://developers.cloudflare.com/workers/runtime-apis/durable-objects

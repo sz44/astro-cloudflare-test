@@ -4,7 +4,6 @@ const { env } = Astro.locals.runtime;
 const ps = env.DB.prepare("SELECT * FROM locations");
 const data = await ps.all();
 console.log(data);
-
 ---
 
 <html lang="en">
@@ -17,12 +16,16 @@ console.log(data);
 	</head>
 	<body>
 		<h1>Astro</h1>
-		{data.results.map(row => {
-			return <div>
-				{Object.entries(row).map(([key, value]) => {
-				return `${key}: ${value}, `;
-			})}
-			</div>
-		})}
+		{
+			data.results.map((row) => {
+				return (
+					<div>
+						{Object.entries(row).map(([key, value]) => {
+							return `${key}: ${value}, `;
+						})}
+					</div>
+				);
+			})
+		}
 	</body>
 </html>
